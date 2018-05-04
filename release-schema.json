@@ -5,32 +5,13 @@
         "budgetBreakdown": {
           "budgetClassifications": {
             "type": "array",
-            "origin": {
-              "title": "origin of funding source",
-              "description": "Codelist that allows you to choose an origin of the monetary funding.",
-              "type": [
-                "string",
-                "null"
-              ],
-              "codelist": "originFoundingSource.csv",
-              "openCodelist": false,
-              "enum": [
-                "Recursos fiscales",
-                "Gasto financiado con recursos del BID-BIRF, así como otros financiamientos externos",
-                "Contraparte nacional",
-                "Ingresos Propios",
-                "Financiamientos Internos",
-                "Financiamientos externos",
-                "Recursos federales",
-                "Recursos estatales",
-                "Otros recursos"
-              ]
+            "components": {
+              "type": "array",
+              "name": "The name of the component of this budget line using the [budgetClassificationsComponents](https://github.com/INAImexico/ocds_budgetClasifications_extension/blob/master/codelists/budgetClassificationComponents.csv) codelist.",
+              "level": "The hierarchy level of the component inside a classification.",
+              "id": "ID to identify a specific value of the origin component.",
+              "description": "Descripction of the specific value of the component."
             },
-            "classifications": "Open codelist that allows you to choose a budget clasification.",
-            "level": "ID to identify the hierarchy level for the concept inside a classification.",
-            "levelLabel": "Name of the concept.",
-            "id": "ID to identify a specific value of the origin concept.",
-            "description": "Descripction of the specific value of the concept.",
             "measures": {
               "type": "array",
               "id": "ID to identify the specific accruing moment in which the budget's value will be expressed.",
